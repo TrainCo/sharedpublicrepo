@@ -1,0 +1,29 @@
+{
+  "manifestVersion": 1,
+  "id": "my-workitem-control",
+  "publisher": "your-publisher-name",
+  "version": "1.0.0",
+  "name": "My Work Item Control",
+  "description": "Custom control for work item form",
+  "targets": [
+    { "id": "Microsoft.VisualStudio.Services.Cloud" }
+  ],
+  "contributions": [
+    {
+      "id": "custom-workitem-control",
+      "type": "ms.vss-work-web.work-item-form-control",
+      "targets": [ "ms.vss-work-web.work-item-form" ],
+      "properties": {
+        "name": "My Control",
+        "uri": "src/workItemControl.html",
+        "height": 400
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "src",
+      "addressable": true
+    }
+  ]
+}
